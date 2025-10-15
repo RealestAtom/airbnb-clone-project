@@ -49,7 +49,7 @@ GitHub: For hosting the repository (airbnb-clone-project) and collaboration.
 
 AWS, Heroku, or Vercel: For hosting the application online
 
-# Team Roles
+# TEAM ROLES
 The AirBnB Clone project involves collaboration across various roles to ensure successful development and deployment. 
 Below are the key roles and their responsibilities:
 
@@ -101,7 +101,7 @@ A skilled test automation engineer would help you choose which parts of an appli
 ## DevOps engineer:
 Even in Agile environments, development and operations teams can be siloed. DevOps engineers serve as a link between the two teams, unifying and automating the software delivery process and helping strike a balance between introducing changes quickly and keeping an application stable. Working together with software developers, system administrators, and operational staff, DevOps engineers oversee and facilitate code releases on a CI/CD basis.
 
-# Technology Stack
+# TECHNOLOGY STACK
 ## - HTML:
 This structures the web pages of the AirBnB Clone application. It defines the layout for components like property listings, booking forms, and user authentication pages, serving as the foundation for the frontend user interface.
 
@@ -135,7 +135,7 @@ This is a platform for hosting the project’s repository (airbnb-clone-project)
 ## - AWS (Optional):
 This is a cloud platform for deploying and hosting the application. It can be used to host the backend (Node.js/Express.js) and database (MongoDB/MySQL), ensuring scalability and reliability in production.
 
-# Database Design
+# DATABASE DESIGN
 The AirBnB Clone project requires a well-structured database to manage the core functionalities of user authentication, property listings, bookings, reviews, and payments. Below are the key entities, their important fields, and their relationships.
 
 ## Key Entities:
@@ -193,4 +193,21 @@ The AirBnB Clone project requires a well-structured database to manage the core 
    #### - Bookings to Payments: A booking can have one or more payments (e.g., partial or full payments), but each payment is associated with exactly one booking. This is a one-to-many relationship (one bookingId to many paymentIds).
    #### - Users to Payments: A user can make multiple payments, but each payment is made by exactly one user. This is a one-to-many relationship (one userId to many paymentIds).
 
+# FEATURE BREAKDOWN
+The AirBnB Clone project is built around key features that enable a functional vacation rental booking system. 
+Below are the main features and their contributions to the project:
 
+## User Authentication:
+This feature allows users to register, log in, and manage their accounts securely using JWT or OAuth. It ensures that only authorized users can access features like booking or property management, providing a secure and personalized experience.
+
+## Property Listings:
+Users can create, view, and search for property listings with details like location, price, and amenities. This feature enables hosts to showcase their rentals and guests to browse available properties, forming the core of the platform’s marketplace.
+
+## Booking System:
+The booking system lets users reserve properties for specific dates and manage their bookings. It ensures seamless scheduling and availability tracking, enhancing the user experience for planning stays.
+
+## Responsive Design:
+The application is designed to be accessible and user-friendly on both desktop and mobile devices. This feature ensures a consistent and intuitive experience across platforms, broadening the application’s reach.
+
+## API Development:
+A RESTful API facilitates data interactions between the frontend and backend, handling requests for user data, listings, and bookings. It ensures efficient and scalable communication, supporting the application’s core functionalities.
