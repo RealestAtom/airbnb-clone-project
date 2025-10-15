@@ -135,5 +135,62 @@ This is a platform for hosting the project’s repository (airbnb-clone-project)
 ## - AWS (Optional):
 This is a cloud platform for deploying and hosting the application. It can be used to host the backend (Node.js/Express.js) and database (MongoDB/MySQL), ensuring scalability and reliability in production.
 
+# Database Design
+The AirBnB Clone project requires a well-structured database to manage the core functionalities of user authentication, property listings, bookings, reviews, and payments. Below are the key entities, their important fields, and their relationships.
+
+## Key Entities:
+   ### Users
+   #### Fields -
+   ##### - userId: Unique identifier for each user (e.g., UUID or auto-incremented ID).
+   ##### - email: User’s email address for login and communication (e.g., "user@example.com").
+   ##### - passwordHash: Securely hashed password for authentication.
+   ##### - name: User’s full name (e.g., "John Doe").
+   ##### - role: User type (e.g., "guest", "host", or "admin").
+   ### > Purpose: Stores user account information for authentication and role-based access.
+
+   ### Properties
+   #### Fields -
+   ##### - propertyId: Unique identifier for each property (e.g., UUID or auto-incremented ID).
+   ##### - hostId: Foreign key referencing the userId of the host who owns the property.
+   ##### - title: Property title (e.g., "Cozy Beachfront Cottage").
+   ##### - location: Property address or coordinates (e.g., "123 Ocean Dr, Miami, FL").
+   ##### - pricePerNight: Cost per night (e.g., 150.00 USD).
+   ### > Purpose: Stores details of rental properties listed on the platform.
+
+   ### Bookings
+   #### Fields -
+   ##### - bookingId: Unique identifier for each booking (e.g., UUID or auto-incremented ID).
+   ##### - propertyId: Foreign key referencing the propertyId of the booked property.
+   ##### - userId: Foreign key referencing the userId of the guest making the booking.
+   ##### - checkInDate: Start date of the booking (e.g., "2025-11-01").
+   ##### - checkOutDate: End date of the booking (e.g., "2025-11-05").
+   ### > Purpose: Tracks reservations made by users for specific properties.
+
+   ### Reviews
+   #### Fields -
+   ##### - reviewId: Unique identifier for each review (e.g., UUID or auto-incremented ID).
+   ##### - propertyId: Foreign key referencing the propertyId being reviewed.
+   ##### - userId: Foreign key referencing the userId of the reviewer.
+   ##### - rating: Numerical rating (e.g., 1 to 5 stars).
+   ##### - comment: Text of the review (e.g., "Great stay, very clean!").
+   ### > Purpose: Stores feedback and ratings from guests about their stay at a property.
+ 
+   ### Payments
+   #### Fields-
+   ##### - paymentId: Unique identifier for each payment (e.g., UUID or auto-incremented ID).
+   ##### - bookingId: Foreign key referencing the bookingId associated with the payment.
+   ##### - userId: Foreign key referencing the userId of the guest making the payment.
+   ##### - amount: Payment amount (e.g., 450.00 USD).
+   ##### - paymentDate: Date of the payment (e.g., "2025-10-15").
+   ### > Purpose: Records financial transactions for bookings.
+
+   ### Entity Relationships
+   #### - Users to Properties: A user (with role as "host") can own multiple properties, but each property belongs to exactly one host. This is a one-to-many relationship (one userId to many propertyIds).
+   #### - Properties to Bookings: A property can have multiple bookings, but each booking is associated with exactly one property. This is a one-to-many relationship (one propertyId to many bookingIds).
+   #### - Users to Bookings: A user (with role as "guest") can make multiple bookings, but each booking is made by exactly one user. This is a one-to-many relationship (one userId to many bookingIds).
+   #### - Properties to Reviews: A property can have multiple reviews, but each review is associated with exactly one property. This is a one-to-many relationship (one propertyId to many reviewIds).
+   #### - Users to Reviews: A user can write multiple reviews, but each review is written by exactly one user. This is a one-to-many relationship (one userId to many reviewIds).
+   #### - Bookings to Payments: A booking can have one or more payments (e.g., partial or full payments), but each payment is associated with exactly one booking. This is a one-to-many relationship (one bookingId to many paymentIds).
+   #### - Users to Payments: A user can make multiple payments, but each payment is made by exactly one user. This is a one-to-many relationship (one userId to many paymentIds).
 
 
