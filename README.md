@@ -211,3 +211,27 @@ The application is designed to be accessible and user-friendly on both desktop a
 
 ## API Development:
 A RESTful API facilitates data interactions between the frontend and backend, handling requests for user data, listings, and bookings. It ensures efficient and scalable communication, supporting the application’s core functionalities.
+
+# API Security
+The AirBnB Clone project’s RESTful API requires robust security measures to protect user data, transactions, and system integrity. 
+Below are the key security measures and their importance to the project’s key areas.
+
+## Key Security Measures
+### - Authentication:
+JSON Web Tokens (JWT) or OAuth will be used to verify user identity for API requests. This ensures that only registered users can access protected endpoints (e.g., user profiles or booking creation), preventing unauthorized access.
+### - Authorization:
+Role-based access control (RBAC) will restrict API actions based on user roles (e.g., guest, host, admin). For example, only hosts can create or update property listings, ensuring users can only perform actions they are permitted to.
+### - Rate Limiting:
+Rate limiting will restrict the number of API requests a user can make in a given time period. This protects the API from abuse, such as denial-of-service (DoS) attacks, ensuring system availability and performance.
+
+## Importance of Security
+### - Protecting User Data:
+Authentication and authorization prevent unauthorized access to sensitive user information (e.g., email, password hashes) stored in the Users entity. Secure APIs ensure user privacy and compliance with data protection standards, building trust in the platform.
+### - Securing Payments:
+Robust authentication and encryption (e.g., HTTPS) protect payment data in the Payments entity from interception or tampering. This ensures safe financial transactions, critical for user confidence and legal compliance.
+### - Safeguarding Property Listings:
+Authorization ensures only verified hosts can create or modify listings in the Properties entity, preventing fraudulent listings. Rate limiting protects the API from excessive requests that could disrupt listing availability or performance.
+### - Ensuring Booking Integrity:
+Secure APIs prevent unauthorized modifications to bookings in the Bookings entity, ensuring accurate scheduling and availability. This maintains a reliable booking system, essential for user satisfaction and operational efficiency.
+### - Protecting Reviews:
+Authentication ensures only users who have completed a booking can submit reviews in the Reviews entity, preventing fake feedback. This maintains the credibility of the review system, which influences user trust and decision-making.
