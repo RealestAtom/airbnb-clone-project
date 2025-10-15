@@ -100,3 +100,40 @@ A skilled test automation engineer would help you choose which parts of an appli
 
 ## DevOps engineer:
 Even in Agile environments, development and operations teams can be siloed. DevOps engineers serve as a link between the two teams, unifying and automating the software delivery process and helping strike a balance between introducing changes quickly and keeping an application stable. Working together with software developers, system administrators, and operational staff, DevOps engineers oversee and facilitate code releases on a CI/CD basis.
+
+# Technology Stack
+## - HTML:
+This structures the web pages of the AirBnB Clone application. It defines the layout for components like property listings, booking forms, and user authentication pages, serving as the foundation for the frontend user interface.
+
+## - CSS:
+This styles the frontend to create a visually appealing and responsive design. It ensures the application’s interface (e.g., property cards, navigation bars) looks consistent and is user-friendly across devices like desktops and mobiles.
+
+## - JavaScript:
+This adds an interactivity to the frontend, enabling dynamic features like real-time search for property listings, form validation, and updating the UI without page reloads. It’s also used in conjunction with React.js for building components.
+
+## - React.js:
+This is a JavaScript library for building a dynamic, component-based user interface. It’s used to create reusable UI components (e.g., property cards, booking modals) and manage the frontend state for a seamless user experience.
+
+## - Node.js:
+This a runtime environment for executing JavaScript on the server-side. It powers the backend of the application, enabling the development of the server logic and API endpoints using Express.js.
+
+## - Express.js:
+This a web framework for Node.js used to build a RESTful API. It handles HTTP requests and responses, routing, and middleware for features like user authentication, property listing retrieval, and booking management.
+
+## - MongoDB (NoSQL):
+This a NoSQL database for storing user data, property listings, and booking information in a flexible, document-based format. It’s ideal for handling unstructured or semi-structured data, such as varied property details or user profiles.
+
+## - MySQL (SQL):
+This is an alternative relational database for storing structured data. It can be used instead of MongoDB to manage user data, listings, and bookings in tables with defined relationships, suitable for complex queries like booking availability checks.
+
+## - Git:
+This is a version control system for tracking code changes and collaborating on the project. It’s used to manage the codebase, commit updates, and push changes to the GitHub repository (airbnb-clone-project).
+
+## - GitHub:
+This is a platform for hosting the project’s repository (airbnb-clone-project). It facilitates collaboration, version control, and sharing of the codebase, including the README.md and project files.
+
+## - AWS (Optional):
+This is a cloud platform for deploying and hosting the application. It can be used to host the backend (Node.js/Express.js) and database (MongoDB/MySQL), ensuring scalability and reliability in production.
+
+
+
