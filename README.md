@@ -235,3 +235,16 @@ Authorization ensures only verified hosts can create or modify listings in the P
 Secure APIs prevent unauthorized modifications to bookings in the Bookings entity, ensuring accurate scheduling and availability. This maintains a reliable booking system, essential for user satisfaction and operational efficiency.
 ### - Protecting Reviews:
 Authentication ensures only users who have completed a booking can submit reviews in the Reviews entity, preventing fake feedback. This maintains the credibility of the review system, which influences user trust and decision-making.
+
+# CI/CD Pipeline
+Continuous Integration and Continuous Deployment (CI/CD) pipelines automate the process of building, testing, and deploying code changes, ensuring a reliable and efficient development workflow. For the AirBnB Clone project, CI/CD pipelines are crucial for maintaining code quality, catching errors early, and streamlining deployments to hosting platforms like AWS, Heroku, or Vercel. They enable the team to deliver updates quickly and consistently, enhancing collaboration and reducing manual errors.
+
+## CI/CD Tools
+### GitHub Actions: 
+A CI/CD platform integrated with GitHub, used to automate testing (e.g., running unit tests for React.js and Express.js) and deployment to hosting services like Vercel or Heroku. It supports workflows tailored to the project’s Node.js and React.js stack.
+### Docker: 
+A containerization tool to package the application and its dependencies (e.g., Node.js, MongoDB/MySQL) into consistent environments. It ensures the application runs identically across development, testing, and production.
+### Jenkins:
+An open-source CI/CD server for automating build, test, and deployment processes. It can be used as an alternative to GitHub Actions for more customized workflows.
+### CircleCI:
+A CI/CD platform that integrates with GitHub to automate testing and deployment, offering scalability for complex projects. It’s suitable for managing the project’s full-stack deployment pipeline.
